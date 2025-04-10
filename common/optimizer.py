@@ -111,6 +111,7 @@ class Adam:
     def update(self, params, grads):
         if self.m is None:
             self.m, self.v = {}, {}
+            print(params)
             for key, val in params.items():
                 self.m[key] = np.zeros_like(val)
                 self.v[key] = np.zeros_like(val)
